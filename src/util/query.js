@@ -17,7 +17,7 @@ const query = async function(gqlQuery, { url, params, fetch, session, stuff } = 
   const urlToken = (preview || livePreview) && token ? `?token=${token}` : '';
 
   // Make the request
-  const res = request('http://craft-headless.test/api' + urlToken, gql`${gqlQuery}`);
+  const res = request(import.meta.env.VITE_API_BASE_URL + urlToken, gql`${gqlQuery}`);
 
   // If we get a response, return the data via props
   if (res) {
