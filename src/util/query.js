@@ -16,9 +16,6 @@ const query = async function(gqlQuery, { url, params, fetch, session, stuff } = 
   // If the URL is a preview URL, use the preview token
   const urlToken = (preview || livePreview) && token ? `?token=${token}` : '';
 
-  console.log('preview', preview);
-  console.log('token', token);
-
   // Make the request
   const res = request('http://craft-headless.test/api' + urlToken, gql`${gqlQuery}`);
 
