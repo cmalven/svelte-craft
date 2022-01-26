@@ -1,0 +1,6 @@
+{
+  "extends": "@malven",
+  "plugins": ["svelte3"],
+  "ignorePatterns": ["*.cjs"],
+  "overrides": [{ "files": ["*.svelte"], "processor": "svelte3/svelte3" }]
+}
